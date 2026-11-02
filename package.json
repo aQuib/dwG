@@ -1,0 +1,10 @@
+{
+  "name": "dwg",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A simple one-page static site.",
+  "scripts": {
+    "dev": "npx --yes serve@14.2.4 -l 3000 .",
+    "start": "npm run dev"
+  }
+}
