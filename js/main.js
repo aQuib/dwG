@@ -172,8 +172,12 @@
     for (var t = 0; t < 30; t++) {
       var w = Math.round(16 + rnd() * rnd() * 84);
       var x = ((t % 6) + rnd()) / 6 * 100, y = (Math.floor(t / 6) + rnd()) / 5 * 100;
-      html += '<span class="star" style="left:' + x.toFixed(1) + '%;top:' + y.toFixed(1) + '%;width:' + w + 'px;height:' + w + 'px;' +
-        '--o:' + (0.24 + rnd() * 0.26).toFixed(2) + ';--rot:' + Math.round((rnd() - 0.5) * 60) + 'deg;' + motion() + '">' +
+      // Drift apart: move away from the centre, faster the further out, so every pair separates.
+      // Golden-ratio start offsets keep the cycles evenly spread, so shapes never restart in a group.
+      var dur = 90 + rnd() * 60, reach = dur * 0.25 / 50;
+      html += '<span class="star star-shape" style="left:' + x.toFixed(1) + '%;top:' + y.toFixed(1) + '%;width:' + w + 'px;height:' + w + 'px;' +
+        '--o:' + (0.24 + rnd() * 0.26).toFixed(2) + ';--rot:' + Math.round((rnd() - 0.5) * 60) + 'deg;' +
+        '--dx:' + ((x - 50) * reach).toFixed(1) + 'vw;--dy:' + ((y - 50) * reach).toFixed(1) + 'vh;--t:' + dur.toFixed(1) + 's;animation-delay:' + (-((t * 0.618034) % 1) * dur).toFixed(1) + 's;">' +
         '<svg viewBox="0 0 10 10" aria-hidden="true" style="display:block;width:100%;height:100%;overflow:visible;"><g fill="none" stroke="' + cols[Math.floor(rnd() * cols.length)] + '" stroke-width="1">' +
         kinds[t % kinds.length].replace(/\/>/g, ' vector-effect="non-scaling-stroke"/>') + '</g></svg></span>';
     }
@@ -183,19 +187,19 @@
   /* Scroll + resize: chapter detection, story progress, and the "started" flag. */
   var story = $('#story'), layer = $('[data-gs-layer]');
   var ticking = false;
+  function updateScroll() {
+    var mid = window.innerHeight * 0.5, a = 0;
+    steps.forEach(function (el, i) { if (el.getBoundingClientRect().top < mid) a = i; });
+    var r = story.getBoundingClientRect(), span = Math.max(1, r.height - window.innerHeight);
+    var away = -r.top;
+    var prog = Math.round(Math.min(1, Math.max(0, away / span)) * 200) / 200;
+    var started = away > 4 || a > 0; // back at the very top: bare dw/G again
+    if (a !== state.step || started !== state.started) { state.step = a; state.started = started; renderStage(); }
+    if (prog !== state.prog) { state.prog = prog; field.style.setProperty('--p', prog); }
+  }
   function onScroll() {
     if (ticking) return; ticking = true;
-    requestAnimationFrame(function () {
-      ticking = false;
-      var mid = window.innerHeight * 0.5, a = 0;
-      steps.forEach(function (el, i) { if (el.getBoundingClientRect().top < mid) a = i; });
-      var r = story.getBoundingClientRect(), span = Math.max(1, r.height - window.innerHeight);
-      var away = -r.top;
-      var prog = Math.round(Math.min(1, Math.max(0, away / span)) * 200) / 200;
-      var started = away > 4 || a > 0; // back at the very top: bare dw/G again
-      if (a !== state.step || started !== state.started) { state.step = a; state.started = started; renderStage(); }
-      if (prog !== state.prog) { state.prog = prog; field.style.setProperty('--p', prog); }
-    });
+    requestAnimationFrame(function () { ticking = false; updateScroll(); });
   }
   function onResize() {
     var w = Math.round(layer.clientWidth);
@@ -284,7 +288,10 @@
 
   /* Init */
   onResize();
+  updateScroll();
   renderStage();
   renderOutcome();
-  onScroll();
+  // The drawing stays hidden with transitions off until it is in place, so it never slides in on load.
+  svg.getBoundingClientRect();
+  svg.classList.add('gs-ready');
 })();
