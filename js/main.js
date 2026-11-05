@@ -3,6 +3,7 @@
  * Plain browser JavaScript, no dependencies. Three parts:
  *   1. Golden-spiral scrollytelling in the #story section (camera, squares, spiral, chapter dots)
  *   2. Floating shapes (#depth-field) that drift toward the camera and respond to scroll
+ *      and the slow starfield behind the studio section (#star-field)
  *   3. "What changes for you" outcomes selector (#oc-list + detail panel)
  */
 (function () {
@@ -123,16 +124,16 @@
    * 2. Floating shapes: drift toward the camera; scrolling pushes them closer and fades them
    * ------------------------------------------------------------------ */
   var field = $('#depth-field');
+  var SHAPES = {
+    tri: '<path d="M5 1L9 9H1Z"/>',
+    sq: '<rect x="1.5" y="1.5" width="7" height="7"/>',
+    circ: '<circle cx="5" cy="5" r="3.8"/>',
+    rect: '<rect x="0.9" y="2.47" width="8.2" height="5.07"/>', // golden rectangle
+    hex: '<path d="M5 1L8.46 3V7L5 9L1.54 7V3Z"/>'
+  };
   (function buildField() {
     var seedN = 11, rnd = function () { seedN = (seedN * 16807) % 2147483647; return (seedN - 1) / 2147483646; };
     var cols = ['#2C5D8F', '#5B8FC7', '#B8893A', '#1C2230', '#A8A397', '#8FB4D8'];
-    var SHAPES = {
-      tri: '<path d="M5 1L9 9H1Z"/>',
-      sq: '<rect x="1.5" y="1.5" width="7" height="7"/>',
-      circ: '<circle cx="5" cy="5" r="3.8"/>',
-      rect: '<rect x="0.9" y="2.47" width="8.2" height="5.07"/>', // golden rectangle
-      hex: '<path d="M5 1L8.46 3V7L5 9L1.54 7V3Z"/>'
-    };
     var kinds = Object.keys(SHAPES), html = '';
     for (var t = 0; t < 52; t++) {
       var z = rnd(); // depth: 0 far, 1 near
@@ -148,6 +149,35 @@
         '<g fill="none" stroke="' + c + '" stroke-width="' + sw + '" vector-effect="non-scaling-stroke">' + SHAPES[kind].replace('/>', ' vector-effect="non-scaling-stroke"/>') + '</g></svg></span>';
     }
     field.innerHTML = html;
+  })();
+
+  /* Studio starfield: tiny twinkling stars plus faint outline shapes, drifting very slowly. */
+  (function buildStars() {
+    var seedN = 29, rnd = function () { seedN = (seedN * 16807) % 2147483647; return (seedN - 1) / 2147483646; };
+    var cols = ['#8FB4D8', '#F4F0E8', '#E3C98F', '#5B8FC7'];
+    // Golden rectangle with its square and quarter arc, as in the dw/G spiral.
+    var golden = SHAPES.rect + '<path d="M5.97 2.47V7.54M0.9 7.54A5.07 5.07 0 0 1 5.97 2.47"/>';
+    var kinds = [SHAPES.tri, SHAPES.sq, SHAPES.circ, golden, SHAPES.hex, SHAPES.rect];
+    var motion = function () {
+      return '--dx:' + Math.round((rnd() - 0.5) * 120) + 'px;--dy:' + Math.round((rnd() - 0.5) * 120) + 'px;' +
+        '--t:' + (60 + rnd() * 60).toFixed(1) + 's;--k:' + (5 + rnd() * 9).toFixed(1) + 's;animation-delay:' + (-rnd() * 60).toFixed(1) + 's,' + (-rnd() * 14).toFixed(1) + 's;';
+    };
+    var html = '';
+    for (var s = 0; s < 120; s++) {
+      var size = (1 + rnd() * rnd() * 2.2).toFixed(1);
+      html += '<span class="star star-dot" style="left:' + (rnd() * 100).toFixed(1) + '%;top:' + (rnd() * 100).toFixed(1) + '%;width:' + size + 'px;height:' + size + 'px;' +
+        '--c:' + cols[Math.floor(rnd() * cols.length)] + ';--o:' + (0.35 + rnd() * 0.55).toFixed(2) + ';--rot:0deg;' + motion() + '"></span>';
+    }
+    // 6 x 5 grid with jitter, so the shapes spread out instead of clumping.
+    for (var t = 0; t < 30; t++) {
+      var w = Math.round(16 + rnd() * rnd() * 84);
+      var x = ((t % 6) + rnd()) / 6 * 100, y = (Math.floor(t / 6) + rnd()) / 5 * 100;
+      html += '<span class="star" style="left:' + x.toFixed(1) + '%;top:' + y.toFixed(1) + '%;width:' + w + 'px;height:' + w + 'px;' +
+        '--o:' + (0.24 + rnd() * 0.26).toFixed(2) + ';--rot:' + Math.round((rnd() - 0.5) * 60) + 'deg;' + motion() + '">' +
+        '<svg viewBox="0 0 10 10" aria-hidden="true" style="display:block;width:100%;height:100%;overflow:visible;"><g fill="none" stroke="' + cols[Math.floor(rnd() * cols.length)] + '" stroke-width="1">' +
+        kinds[t % kinds.length].replace(/\/>/g, ' vector-effect="non-scaling-stroke"/>') + '</g></svg></span>';
+    }
+    $('#star-field').innerHTML = html;
   })();
 
   /* Scroll + resize: chapter detection, story progress, and the "started" flag. */

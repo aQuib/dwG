@@ -12,7 +12,6 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #8FB4
 .gs-fade{transition:opacity .9s ease,stroke-width 1.8s cubic-bezier(.65,0,.35,1)}
 .bokeh{position:absolute;animation:dwgApproach 24s linear infinite;transform-origin:50% 50%}
 .step-copy{transition:opacity .6s ease}
-.outline-word{color:transparent;-webkit-text-stroke:1px #3A5F86}
 @keyframes dwgFloat{0%,100%{transform:translateY(0) rotate(0deg)}
 50%{transform:translateY(-10px) rotate(.6deg)}
 }
@@ -55,12 +54,24 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #8FB4
 40%,85%{transform:none;opacity:1}
 100%{transform:translate(var(--x),var(--y));opacity:.25}
 }
+.star{position:absolute;display:block;opacity:var(--o);animation:starDrift var(--t) ease-in-out infinite alternate,starTwinkle var(--k) ease-in-out infinite}
+.star-dot{border-radius:999px;background:var(--c);box-shadow:0 0 6px var(--c)}
+@keyframes starDrift{from{transform:translate(0,0) rotate(0deg)}
+to{transform:translate(var(--dx),var(--dy)) rotate(var(--rot))}
+}
+@keyframes starTwinkle{0%,100%{opacity:var(--o)}
+50%{opacity:calc(var(--o) * .35)}
+}
 @media (max-width: 1100px){.svc-link{display:none}
+}
+@media (max-width: 640px){.gs-progress{right:16px!important;padding:0!important}
+.gs-progress p{display:none}
+#top{padding-top:230px!important}
 }
 @media (prefers-reduced-motion: reduce){.depth{transition:none!important;transform:none!important}
 .btn-glow,.btn-chip{transition:none!important}
 .gs-cam,.gs-draw,.gs-fade,.step-copy{transition:none!important}
-.bokeh,.svc-tile,.svc-run,.svc-pop,.svc-blink,.svc-snap{animation:none!important}
+.bokeh,.star,.svc-tile,.svc-run,.svc-pop,.svc-blink,.svc-snap{animation:none!important}
 .svc-check{animation:none!important;opacity:1}
 }
 

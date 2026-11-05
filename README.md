@@ -8,7 +8,7 @@ A simple one-page static site — one HTML file, no build step.
 npm run dev
 ```
 
-Then open http://localhost:3000.
+Then open http://localhost:3000. The page reloads automatically when you save a file.
 
 No Node? Use Python instead:
 

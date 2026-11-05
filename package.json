@@ -4,7 +4,7 @@
   "private": true,
   "description": "A simple one-page static site.",
   "scripts": {
-    "dev": "npx --yes serve@14.2.4 -l 3000 .",
+    "dev": "npx --yes browser-sync@3.0.2 start --server --port 3000 --files 'index.html,css/**,js/**,assets/**' --no-open --no-ui --no-notify --no-ghost-mode",
     "start": "npm run dev"
   }
 }
