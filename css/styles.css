@@ -1,0 +1,66 @@
+/* designs w/ GOD, one-page site (exported from design version D) */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:#0B0F16}
+a{color:#8FB4D8}
+a:hover{color:#B7D0E8}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #8FB4D8;outline-offset:3px}
+.depth{position:absolute;display:block;transform:translate3d(0,calc(var(--p) * var(--z) * -140px),0) scale(calc(1 + var(--p) * var(--z) * 1.6));opacity:calc(var(--o) * (1 - var(--p) * var(--z) * 0.85));filter:blur(calc(var(--b) + var(--p) * var(--z) * 5px));transition:transform .5s ease-out,opacity .5s ease-out,filter .5s ease-out;will-change:transform,opacity}
+.gs-cam{transition:transform 1.8s cubic-bezier(.65,0,.35,1)}
+.gs-draw{transition:stroke-dashoffset 2s cubic-bezier(.65,0,.35,1),stroke-width 1.8s cubic-bezier(.65,0,.35,1)}
+.gs-fade{transition:opacity .9s ease,stroke-width 1.8s cubic-bezier(.65,0,.35,1)}
+.bokeh{position:absolute;animation:dwgApproach 24s linear infinite;transform-origin:50% 50%}
+.step-copy{transition:opacity .6s ease}
+.outline-word{color:transparent;-webkit-text-stroke:1px #3A5F86}
+@keyframes dwgFloat{0%,100%{transform:translateY(0) rotate(0deg)}
+50%{transform:translateY(-10px) rotate(.6deg)}
+}
+@keyframes dwgApproach{0%{transform:translate(0,0) scale(.55) rotate(0deg);opacity:0;filter:blur(1px)}
+14%{opacity:1;filter:blur(0)}
+70%{opacity:.85}
+100%{transform:translate(var(--dx),var(--dy)) scale(2.1) rotate(var(--rot));opacity:0;filter:blur(3.5px)}
+}
+.btn-glow{position:relative;background:linear-gradient(100deg,#234B74 0%,#2C5D8F 48%,#3E72A8 100%);border:1px solid rgba(143,180,216,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),inset 0 -1px 0 rgba(0,0,0,.18),0 10px 26px rgba(44,93,143,.42),0 0 0 4px rgba(91,143,199,.10);transition:box-shadow .3s ease,transform .3s ease,filter .3s ease}
+.btn-glow:hover{filter:brightness(1.08);transform:translateY(-1px);box-shadow:inset 0 1px 0 rgba(255,255,255,.34),inset 0 -1px 0 rgba(0,0,0,.18),0 16px 40px rgba(44,93,143,.55),0 0 0 6px rgba(91,143,199,.16)}
+.btn-chip{display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);transition:transform .3s ease}
+.btn-glow:hover .btn-chip{transform:translateX(3px)}
+.grad-h{background:linear-gradient(100deg,#1F4268 0%,#2C5D8F 45%,#5B8FC7 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-bottom:.06em}
+.h-tile{flex:0 0 72px;height:72px;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#FFFFFF 0%,#EEF3FA 100%);border:1px solid #9FBADB;box-shadow:0 14px 34px rgba(44,93,143,.22),inset 0 1px 0 #FFFFFF}
+.svc-tile{display:flex;align-items:center;justify-content:center;background:#FFFFFF;border:1px solid #E1E7F0;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#2C5D8F;animation:svcSweep 4.2s ease-in-out infinite}
+.svc-run{left:0;animation:svcRun 2.4s cubic-bezier(.65,0,.35,1) infinite}
+.svc-pop{animation:svcPop 2.4s ease-in-out infinite}
+.svc-blink{animation:svcBlink 1.6s ease-in-out infinite}
+.svc-check{opacity:0;animation:svcCheck 4s ease-out infinite}
+.svc-snap{display:block;animation:svcSnap 4.4s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes svcSweep{0%,100%{background:#FFFFFF;border-color:#E1E7F0;box-shadow:none}
+10%,24%{background:#E6EEF8;border-color:#2C5D8F;box-shadow:0 8px 18px rgba(44,93,143,.18)}
+}
+@keyframes svcRun{0%{left:0%;opacity:0}
+15%{opacity:1}
+85%{opacity:1}
+100%{left:calc(100% - 10px);opacity:0}
+}
+@keyframes svcPop{0%,100%{transform:scale(1)}
+50%{transform:scale(1.06)}
+}
+@keyframes svcBlink{0%,100%{opacity:1}
+50%{opacity:.3}
+}
+@keyframes svcCheck{0%,10%{opacity:0;transform:translateX(-6px)}
+22%,88%{opacity:1;transform:none}
+100%{opacity:0}
+}
+@keyframes svcSnap{0%,15%{transform:translate(var(--x),var(--y));opacity:.25}
+40%,85%{transform:none;opacity:1}
+100%{transform:translate(var(--x),var(--y));opacity:.25}
+}
+@media (max-width: 1100px){.svc-link{display:none}
+}
+@media (prefers-reduced-motion: reduce){.depth{transition:none!important;transform:none!important}
+.btn-glow,.btn-chip{transition:none!important}
+.gs-cam,.gs-draw,.gs-fade,.step-copy{transition:none!important}
+.bokeh,.svc-tile,.svc-run,.svc-pop,.svc-blink,.svc-snap{animation:none!important}
+.svc-check{animation:none!important;opacity:1}
+}
+

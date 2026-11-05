@@ -16,3 +16,6 @@ npm-debug.log*
 # Env
 .env
 .env.*
+
+# Private project notes, never publish
+CLAUDE.md

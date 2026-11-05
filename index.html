@@ -1,92 +1,412 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Example Project</title>
-  <style>
-    :root {
-      --bg: #fafaf9;
-      --text: #1c1917;
-      --muted: #57534e;
-      --accent: #2563eb;
-      --card: #ffffff;
-      --border: #e7e5e4;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #1c1917;
-        --text: #f5f5f4;
-        --muted: #a8a29e;
-        --accent: #60a5fa;
-        --card: #292524;
-        --border: #44403c;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    main {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 64px 16px;
-    }
-    h1 { font-size: 2.5rem; margin: 0 0 8px; }
-    .lead { color: var(--muted); font-size: 1.2rem; margin: 0 0 40px; }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin-bottom: 40px;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-    }
-    .card h2 { font-size: 1.1rem; margin: 0 0 6px; }
-    .card p { margin: 0; color: var(--muted); }
-    a.button {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: 600;
-    }
-    footer { margin-top: 64px; color: var(--muted); font-size: 0.9rem; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>designs w/ GOD — Website modernization &amp; AI/UX care</title>
+<meta name="description" content="A design studio that modernizes how growing businesses show up online — starting with the website, and keeping it sharp, month after month.">
+<link rel="icon" href="assets/dwg-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/main.js" defer></script>
 </head>
 <body>
-  <main>
-    <h1>Hello, world</h1>
-    <p class="lead">A simple one-page site to get started.</p>
+<div style="background: #0B0F16; color: #F4F0E8; font-family: Lexend, system-ui, sans-serif; overflow: clip;">
 
-    <section class="cards">
-      <div class="card">
-        <h2>Simple</h2>
-        <p>One HTML file, no build step.</p>
-      </div>
-      <div class="card">
-        <h2>Responsive</h2>
-        <p>Looks good on phones and desktops.</p>
-      </div>
-      <div class="card">
-        <h2>Dark mode</h2>
-        <p>Follows your system theme.</p>
-      </div>
-    </section>
+<!-- Header -->
+<header style="position: relative; z-index: 5;">
+<div style="max-width: 1360px; margin: 0 auto; padding: 28px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+<a href="#top" aria-label="designs w/ GOD, home" style="display: flex;">
+<svg viewBox="14 14 312 112" width="96" height="34" aria-hidden="true"><defs><clipPath id="d-hd-a"><rect x="0" y="20" width="400" height="100"></rect></clipPath><clipPath id="d-hd-x"><rect x="0" y="58" width="400" height="62"></rect></clipPath></defs><g fill="none" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"><circle stroke="#1C2230" cx="50" cy="89" r="25"></circle><path stroke="#1C2230" clip-path="url(#d-hd-a)" d="M75 10V130"></path><path stroke="#1C2230" clip-path="url(#d-hd-x)" d="M95.8 50L115 114L130 64L145 114L164.2 50"></path><path stroke="#2C5D8F" clip-path="url(#d-hd-a)" d="M170.2 130L206.2 10"></path><path stroke="#1C2230" d="M301.1 38.9A44 44 0 1 0 314 70H280"></path></g></svg>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 40px;">
+<a href="#story" style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #3F3A33; text-decoration: none;">Process</a>
+<a href="#offer" style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #3F3A33; text-decoration: none;">Services</a>
+<a href="#packages" style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #3F3A33; text-decoration: none;">Packages</a>
+<a href="#work" style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #3F3A33; text-decoration: none;">Work</a>
+<a href="#contact" class="btn-glow" style="padding: 14px 24px; color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none;">Book a call</a>
+</nav>
+</div>
+</header>
 
-    <a class="button" href="#" onclick="alert('Hi there!'); return false;">Say hi</a>
+<!-- Scrollytelling story -->
+<section id="story" style="position: relative; margin-top: -96px; background: #FFFFFF; color: #1C2230; overflow: clip;">
+<div aria-hidden="true" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none;">
+<div style="position: absolute; left: 50%; top: 0; width: 1100px; height: 1100px; border-radius: 999px; background: radial-gradient(circle, rgba(44,93,143,0.10) 0%, rgba(44,93,143,0) 62%);"></div>
+<div style="position: absolute; left: 62%; top: 1500px; width: 900px; height: 900px; border-radius: 999px; background: radial-gradient(circle, rgba(184,137,58,0.08) 0%, rgba(184,137,58,0) 60%);"></div>
+<div style="position: absolute; left: 40%; top: 3000px; width: 1000px; height: 1000px; border-radius: 999px; background: radial-gradient(circle, rgba(44,93,143,0.08) 0%, rgba(44,93,143,0) 62%);"></div>
+<div id="depth-field" style="position: absolute; inset: 0; --p: 0;"><!-- shapes generated by js/main.js --></div>
+</div>
 
-    <footer>&copy; 2026 Example Project</footer>
-  </main>
+<!-- Full-width sticky spiral background: its own full-height frame, so it stops at the end of the story -->
+<div style="position: absolute; inset: 0; z-index: 0; pointer-events: none;">
+<div data-gs-layer="1" style="position: sticky; top: 0; height: 860px; pointer-events: none;">
+<svg id="gs-svg" role="img" aria-label="The dw/G mark." viewBox="0 0 1440 860" preserveAspectRatio="xMinYMid meet" class="gs-fade" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 1;">
+<defs><clipPath id="gs-a"><rect x="0" y="20" width="400" height="100"></rect></clipPath><clipPath id="gs-x"><rect x="0" y="58" width="400" height="62"></rect></clipPath><radialGradient id="gs-grad" gradientUnits="userSpaceOnUse" cx="270" cy="70" r="1810"><stop offset="0.03" stop-color="#2C5D8F"></stop><stop offset="1" stop-color="#E3EAF1"></stop></radialGradient></defs>
+<g id="gs-cam" class="gs-cam">
+<g fill="none" stroke="#1C2230" stroke-opacity="0.22">
+<rect class="gs-fade" x="226" y="26" width="44" height="44" data-q="0" style="opacity: 0;"></rect>
+<rect class="gs-fade" x="226" y="70" width="44" height="44" data-q="1" style="opacity: 0;"></rect>
+<rect class="gs-fade" x="270" y="26" width="88" height="88" data-q="2" style="opacity: 0;"></rect>
+<rect class="gs-fade" x="226" y="-106" width="132" height="132" data-q="3" style="opacity: 0;"></rect>
+<rect class="gs-fade" x="6" y="-106" width="220" height="220" data-q="4" style="opacity: 0;"></rect>
+<rect class="gs-fade" x="6" y="114" width="352" height="352" data-q="5" style="opacity: 0;"></rect>
+<rect class="gs-fade" x="358" y="-106" width="572" height="572" data-q="6" style="opacity: 0;"></rect>
+<rect class="gs-fade" x="6" y="-1030" width="924" height="924" data-q="7" style="opacity: 0;"></rect>
+<rect class="gs-fade" x="-1490" y="-1030" width="1496" height="1496" data-q="8" style="opacity: 0;"></rect>
+</g>
+<g fill="none" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"><circle stroke="#1C2230" cx="50" cy="89" r="25"></circle><path stroke="#1C2230" clip-path="url(#gs-a)" d="M75 10V130"></path><path stroke="#1C2230" clip-path="url(#gs-x)" d="M95.8 50L115 114L130 64L145 114L164.2 50"></path><path stroke="#2C5D8F" clip-path="url(#gs-a)" d="M170.2 130L206.2 10"></path><path stroke="#1C2230" d="M301.1 38.9A44 44 0 1 0 314 70H280"></path></g>
+<path class="gs-draw" d="M270 26A44 44 0 0 0 226 70A44 44 0 0 0 270 114A88 88 0 0 0 358 26A132 132 0 0 0 226 -106A220 220 0 0 0 6 114A352 352 0 0 0 358 466A572 572 0 0 0 930 -106A924 924 0 0 0 6 -1030A1496 1496 0 0 0 -1490 466" pathLength="1" fill="none" stroke="url(#gs-grad)" stroke-linecap="round" stroke-dasharray="1 1" id="gs-spiral" style="stroke-dashoffset: 1;"></path>
+<circle id="gs-seed" cx="270" cy="26" r="7" fill="#2C5D8F" style="opacity: 0;" class="gs-fade"></circle>
+</g>
+</svg>
+<div style="position: absolute; right: 40px; bottom: 36px; display: flex; align-items: center; gap: 16px; pointer-events: auto; background: rgba(255,255,255,0.85); padding: 0 0 0 16px;">
+<p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #665F55;"><span id="gs-stepnum" style="color: #8A6A2E;">01</span> / 05 — <span id="gs-caption">The seed: G</span></p>
+<div id="gs-dots" style="display: flex; gap: 6px;"><!-- chapter buttons generated by js/main.js -->
+</div>
+</div>
+</div>
+</div>
+
+<div style="position: relative; z-index: 1; max-width: 1360px; margin: 0 auto; padding: 0 40px;">
+
+<!-- Steps -->
+<div style="max-width: 600px;">
+
+<div id="top" data-story-step="0" class="step-copy" style="min-height: 860px; padding-top: 96px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; gap: 28px; opacity: 1;">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6A2E;">Stop patching your website. Start renewing it.</p>
+<h1 style="margin: 0; font-size: clamp(32px, 4vw, 60px); line-height: 1.02; font-weight: 300; letter-spacing: -0.045em;"><span style="display: block; white-space: nowrap;">Websites, renewed</span><span style="display: block; white-space: nowrap;">with intention<span style="color: #2C5D8F;">.</span></span></h1>
+<p style="margin: 0; max-width: 520px; font-size: 20px; line-height: 32px; font-weight: 300; color: #3F3A33;">A design studio that modernizes how growing businesses show up online — starting with the website, and keeping it sharp, month after month.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; padding-top: 8px;">
+<a href="#contact" class="btn-glow" style="display: inline-flex; align-items: center; gap: 16px; padding: 10px 10px 10px 28px; color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none;">Book a discovery call<span class="btn-chip" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2"><path d="M4 12H20M14 6L20 12L14 18"></path></svg></span></a>
+<a href="#offer" style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #1C2230; text-decoration: none;">See the services <span style="color: #2C5D8F;">↓</span></a>
+</div>
+<p style="margin: 40px 0 0; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #665F55;">Scroll to see how we work ↓</p>
+</div>
+
+<div data-story-step="1" class="step-copy" style="min-height: 760px; display: flex; flex-direction: column; justify-content: center; gap: 24px; opacity: 0.4;">
+<p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6A2E;">The problem</p>
+<div style="display: flex; align-items: center; gap: 24px;"><span class="h-tile" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2C5D8F" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"><path d="M7 3H17M7 21H17M8 3C8 8 16 8 16 12C16 16 8 16 8 21M16 3C16 8 8 8 8 12C8 16 16 16 16 21"></path></svg></span><h2 class="grad-h" style="margin: 0; font-size: clamp(40px, 4.4vw, 68px); line-height: 1.05; font-weight: 300; letter-spacing: -0.03em;">Most websites start aging the day they launch.</h2></div>
+<p style="margin: 0; max-width: 500px; font-size: 19px; line-height: 31px; font-weight: 300; color: #3F3A33;">Pages pile up, patterns drift and visitors stop finding what they came for. And as more customers ask AI assistants instead of searching, a site that isn't AI-ready gets skipped. It still runs — it just stops working for the people, and the tools, looking for you.</p>
+</div>
+
+<div data-story-step="2" class="step-copy" style="min-height: 760px; display: flex; flex-direction: column; justify-content: center; gap: 24px; opacity: 0.4;">
+<p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6A2E;">01 — Discover · 1–2 weeks</p>
+<div style="display: flex; align-items: center; gap: 24px;"><span class="h-tile" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2C5D8F" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"><path d="M10.5 4A6.5 6.5 0 1 1 10.5 17A6.5 6.5 0 0 1 10.5 4ZM15.3 15.3L21 21M8 10.5H13M10.5 8V13"></path></svg></span><h2 class="grad-h" style="margin: 0; font-size: clamp(40px, 4.4vw, 68px); line-height: 1.05; font-weight: 300; letter-spacing: -0.03em;">We listen before we draw.</h2></div>
+<p style="margin: 0; max-width: 500px; font-size: 19px; line-height: 31px; font-weight: 300; color: #3F3A33;">An audit of your current site and research with your real customers show what they need, where they get stuck and what matters most.</p>
+</div>
+
+<div data-story-step="3" class="step-copy" style="min-height: 760px; display: flex; flex-direction: column; justify-content: center; gap: 24px; opacity: 0.4;">
+<p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6A2E;">02 — Modernize · [6–8] weeks</p>
+<div style="display: flex; align-items: center; gap: 24px;"><span class="h-tile" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2C5D8F" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"><path d="M3 4H21V20H3ZM3 9H21M9 9V20M13 13H18M13 16.5H16"></path></svg></span><h2 class="grad-h" style="margin: 0; font-size: clamp(40px, 4.4vw, 68px); line-height: 1.05; font-weight: 300; letter-spacing: -0.03em;">Then we rebuild with structure.</h2></div>
+<p style="margin: 0; max-width: 500px; font-size: 19px; line-height: 31px; font-weight: 300; color: #3F3A33;">A fixed-price redesign: clear hierarchy, accessible by default, fast on every device — with your review at every milestone.</p>
+</div>
+
+<div data-story-step="4" class="step-copy" style="min-height: 860px; padding-bottom: 100px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; gap: 24px; opacity: 0.4;">
+<p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6A2E;">03 — Sustain · month to month</p>
+<div style="display: flex; align-items: center; gap: 24px;"><span class="h-tile" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2C5D8F" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter"><path d="M20 12A8 8 0 1 1 17.66 6.34M18 2.5V6.6H13.9M9 12.5L11 14.5L15.5 10"></path></svg></span><h2 class="grad-h" style="margin: 0; font-size: clamp(40px, 4.4vw, 68px); line-height: 1.05; font-weight: 300; letter-spacing: -0.03em;">And keep it sharp, month after month.</h2></div>
+<p style="margin: 0; max-width: 500px; font-size: 19px; line-height: 31px; font-weight: 300; color: #3F3A33;">AI-assisted testing and analytics, each reviewed by a person, become steady improvements — so your site never falls behind again.</p>
+<a href="#packages" style="align-self: flex-start; margin-top: 12px; padding: 18px 30px; border: 1px solid #1C2230; color: #1C2230; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none;">See packages</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Services -->
+<section id="offer" style="position: relative; padding: 160px 0 176px;">
+<div aria-hidden="true" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none;">
+<div style="position: absolute; left: -10%; top: 10%; width: 900px; height: 900px; border-radius: 999px; background: radial-gradient(circle, rgba(31,66,104,0.55) 0%, rgba(31,66,104,0) 64%);"></div>
+<div style="position: absolute; right: -8%; bottom: 0; width: 700px; height: 700px; border-radius: 999px; background: radial-gradient(circle, rgba(227,201,143,0.10) 0%, rgba(227,201,143,0) 60%);"></div>
+</div>
+<div style="position: relative; max-width: 1320px; margin: 0 auto; padding: 0 40px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 64px;">
+<div>
+<p style="margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #E3C98F;">Services</p>
+<h2 style="margin: 0; font-size: clamp(40px, 4.4vw, 64px); line-height: 1.05; font-weight: 300; letter-spacing: -0.03em;">What we offer</h2>
+</div>
+<p style="margin: 0; max-width: 380px; font-size: 16px; line-height: 26px; font-weight: 300; color: #C9C2B4;">Five disciplines, one studio — so research, design and care stay connected from first call to every monthly check-in.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px;">
+<article style="position: relative; flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 18px; padding: 36px 36px 36px; box-sizing: border-box; background: radial-gradient(120% 60% at 0% 0%, rgba(143,180,216,0.20), rgba(255,255,255,0) 60%), #FFFFFF; color: #1C2230; border: 1px solid rgba(28,34,48,0.08); box-shadow: 0 24px 60px rgba(0,0,0,0.30), 0 2px 0 rgba(255,255,255,0.6) inset;">
+<span class="svc-link" aria-hidden="true" style="position: absolute; right: -25px; top: 54px; width: 24px; height: 2px; background: #2C5D8F;"><span style="position: absolute; right: -3px; top: -3px; width: 8px; height: 8px; border-radius: 999px; background: #FFFFFF; border: 1px solid #2C5D8F;"></span></span>
+<div style="display: flex; align-items: center; gap: 14px;"><span style="display: inline-flex; align-items: center; padding: 8px 16px; border: 1px solid #BFD0E6; background: #EEF3FA; color: #2C5D8F; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;">Service 01</span><span class="svc-blink" style="width: 8px; height: 8px; border-radius: 999px; background: #2C5D8F;"></span></div>
+<h3 style="margin: 4px 0 0; font-size: 26px; line-height: 32px; font-weight: 500; letter-spacing: -0.015em;">Website modernization</h3>
+<p style="margin: 0; font-size: 16px; line-height: 27px; font-weight: 300; color: #4A5160;">Research, redesign and build of a fast, accessible site — every page brought up to date, one system at a time.</p>
+<div style="position: relative; height: 230px; margin-top: auto; background: radial-gradient(80% 60% at 50% 0%, rgba(143,180,216,0.28), rgba(245,247,251,0) 70%), #F5F7FB; border: 1px solid #E1E7F0; box-shadow: inset 0 1px 0 #FFFFFF, inset 0 -12px 24px rgba(44,93,143,0.04); overflow: hidden;" aria-hidden="true"><div style="position: absolute; inset: 24px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px;"><span class="svc-tile" style="animation-delay: 0.00s;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" role="img" aria-label="Home page"><path d="M3 11L12 4L21 11M5.5 9.5V20H18.5V9.5M10 20V14H14V20"></path></svg></span><span class="svc-tile" style="animation-delay: 0.35s;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" role="img" aria-label="About page"><path d="M12 12A4 4 0 1 0 12 4A4 4 0 0 0 12 12ZM4.5 20.5C5.5 16.5 8.5 14.5 12 14.5C15.5 14.5 18.5 16.5 19.5 20.5"></path></svg></span><span class="svc-tile" style="animation-delay: 0.70s;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" role="img" aria-label="Services page"><path d="M4 7H20V19H4ZM9 7V4.5H15V7M4 12.5H20"></path></svg></span><span class="svc-tile" style="animation-delay: 1.05s;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" role="img" aria-label="Contact page"><path d="M3.5 5.5H20.5V18.5H3.5ZM3.5 6L12 13L20.5 6"></path></svg></span><span class="svc-tile" style="animation-delay: 1.40s;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" role="img" aria-label="FAQ page"><path d="M12 21A9 9 0 1 0 12 3A9 9 0 0 0 12 21ZM9.5 9.3A2.5 2.5 0 1 1 12 11.8V13.6M12 16.8V17"></path></svg></span><span class="svc-tile" style="animation-delay: 1.75s;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" role="img" aria-label="Blog page"><path d="M5 3.5H15L19 7.5V20.5H5ZM14.5 3.5V8H19M8.5 12H15.5M8.5 15.5H15.5"></path></svg></span><span class="svc-tile" style="animation-delay: 2.10s;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" role="img" aria-label="Book page"><path d="M4 6H20V20H4ZM4 10.5H20M8.5 3.5V8M15.5 3.5V8M9 15L11 17L15.5 12.5"></path></svg></span><span class="svc-tile" style="animation-delay: 2.45s;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" role="img" aria-label="Team page"><path d="M9 11A3 3 0 1 0 9 5A3 3 0 0 0 9 11ZM2.5 19.5C3.2 16.5 5.8 14.5 9 14.5C12.2 14.5 14.8 16.5 15.5 19.5M16 11A2.5 2.5 0 1 0 16 6M17.5 14.5C19.5 15 21 16.8 21.5 19.5"></path></svg></span><span class="svc-tile" style="animation-delay: 2.80s;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" role="img" aria-label="News page"><path d="M3.5 5H17V19H5.5A2 2 0 0 1 3.5 17ZM17 9H20.5V17A2 2 0 0 1 18.5 19H5.5M7 9H13.5M7 12.5H13.5M7 16H11"></path></svg></span><span class="svc-tile" style="animation-delay: 3.15s;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" role="img" aria-label="Events page"><path d="M12 3L14.6 8.6L20.5 9.3L16.1 13.4L17.3 19.3L12 16.3L6.7 19.3L7.9 13.4L3.5 9.3L9.4 8.6Z"></path></svg></span><span class="svc-tile" style="animation-delay: 3.50s;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" role="img" aria-label="Shop page"><path d="M4 8H20L18.8 20H5.2ZM8.5 10.5V6.5A3.5 3.5 0 0 1 15.5 6.5V10.5"></path></svg></span><span class="svc-tile" style="animation-delay: 3.85s;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" role="img" aria-label="Careers page"><path d="M3.5 8H20.5V19H3.5ZM9 8V5H15V8M3.5 13H20.5M10.5 13V15H13.5V13"></path></svg></span></div></div>
+</article>
+<article style="position: relative; flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 18px; padding: 36px 36px 36px; box-sizing: border-box; background: radial-gradient(120% 60% at 0% 0%, rgba(143,180,216,0.20), rgba(255,255,255,0) 60%), #FFFFFF; color: #1C2230; border: 1px solid rgba(28,34,48,0.08); box-shadow: 0 24px 60px rgba(0,0,0,0.30), 0 2px 0 rgba(255,255,255,0.6) inset;">
+<span class="svc-link" aria-hidden="true" style="position: absolute; right: -25px; top: 54px; width: 24px; height: 2px; background: #2C5D8F;"><span style="position: absolute; right: -3px; top: -3px; width: 8px; height: 8px; border-radius: 999px; background: #FFFFFF; border: 1px solid #2C5D8F;"></span></span>
+<div style="display: flex; align-items: center; gap: 14px;"><span style="display: inline-flex; align-items: center; padding: 8px 16px; border: 1px solid #BFD0E6; background: #EEF3FA; color: #2C5D8F; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;">Service 02</span><span class="svc-blink" style="width: 8px; height: 8px; border-radius: 999px; background: #2C5D8F;"></span></div>
+<h3 style="margin: 4px 0 0; font-size: 26px; line-height: 32px; font-weight: 500; letter-spacing: -0.015em;">AI/UX monthly care</h3>
+<p style="margin: 0; font-size: 16px; line-height: 27px; font-weight: 300; color: #4A5160;">AI-assisted testing and analytics find what to improve; a person reviews every change before it ships.</p>
+<div style="position: relative; height: 230px; margin-top: auto; background: radial-gradient(80% 60% at 50% 0%, rgba(143,180,216,0.28), rgba(245,247,251,0) 70%), #F5F7FB; border: 1px solid #E1E7F0; box-shadow: inset 0 1px 0 #FFFFFF, inset 0 -12px 24px rgba(44,93,143,0.04); overflow: hidden;" aria-hidden="true">
+<div style="position: absolute; left: 28px; right: 28px; top: 44px; display: flex; align-items: center; gap: 14px;">
+<span style="flex: 0 0 48px; height: 48px; background: #FFFFFF; border: 1px solid #D5DEEA; box-shadow: 0 6px 16px rgba(44,93,143,0.10); display: flex; align-items: center; justify-content: center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2C5D8F" stroke-width="1.6"><path d="M4 19V11M10 19V6M16 19V13M3 19H21"></path></svg></span>
+<span style="position: relative; flex: 1; height: 2px; background: #C9D6E6;"><span class="svc-run" style="position: absolute; top: -4px; width: 10px; height: 10px; background: #2C5D8F;"></span></span>
+<span style="position: relative; flex: 0 0 48px; height: 48px; background: #FFFFFF; border: 1px solid #2C5D8F; box-shadow: 0 6px 16px rgba(44,93,143,0.16); display: flex; align-items: center; justify-content: center;" class="svc-pop"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2C5D8F" stroke-width="2"><path d="M4 12.5L9.5 18L20 6.5"></path></svg><span style="position: absolute; bottom: 56px; right: -6px; padding: 4px 8px; background: #FFFFFF; border: 1px solid #D5DEEA; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; color: #3F3A33;">IMPROVE</span></span>
+</div>
+<div style="position: absolute; left: 28px; right: 28px; top: 140px; display: flex; align-items: center; gap: 14px;">
+<span style="flex: 0 0 48px; height: 48px; border-radius: 999px; background: #FFFFFF; border: 1px solid #D5DEEA; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C5D8F" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7V12L15 14"></path></svg></span>
+<span style="flex: 1; height: 0; border-top: 2px dashed #C9D6E6;"></span>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid #E3C98F; background: #FBF6EA; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; color: #7A5C26;"><span class="svc-blink" style="width: 6px; height: 6px; border-radius: 999px; background: #B8893A;"></span>MONTHLY</span>
+</div>
+</div>
+</article>
+<article style="position: relative; flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 18px; padding: 36px 36px 36px; box-sizing: border-box; background: radial-gradient(120% 60% at 0% 0%, rgba(143,180,216,0.20), rgba(255,255,255,0) 60%), #FFFFFF; color: #1C2230; border: 1px solid rgba(28,34,48,0.08); box-shadow: 0 24px 60px rgba(0,0,0,0.30), 0 2px 0 rgba(255,255,255,0.6) inset;">
+
+<div style="display: flex; align-items: center; gap: 14px;"><span style="display: inline-flex; align-items: center; padding: 8px 16px; border: 1px solid #BFD0E6; background: #EEF3FA; color: #2C5D8F; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;">Service 03</span><span class="svc-blink" style="width: 8px; height: 8px; border-radius: 999px; background: #5B8FC7;"></span></div>
+<h3 style="margin: 4px 0 0; font-size: 26px; line-height: 32px; font-weight: 500; letter-spacing: -0.015em;">UX research &amp; testing</h3>
+<p style="margin: 0; font-size: 16px; line-height: 27px; font-weight: 300; color: #4A5160;">Real customers, real tasks. Their behavior turns into clear, prioritized insight — not guesswork.</p>
+<div style="position: relative; height: 230px; margin-top: auto; background: radial-gradient(80% 60% at 50% 0%, rgba(143,180,216,0.28), rgba(245,247,251,0) 70%), #F5F7FB; border: 1px solid #E1E7F0; box-shadow: inset 0 1px 0 #FFFFFF, inset 0 -12px 24px rgba(44,93,143,0.04); overflow: hidden;" aria-hidden="true">
+<div style="position: absolute; left: 24px; right: 24px; top: 0; bottom: 0; display: flex; align-items: center; gap: 0;">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 40px;">
+<span style="position: relative; height: 2px; background: #C9D6E6;"><span class="svc-run" style="position: absolute; top: -4px; width: 10px; height: 10px; border-radius: 999px; background: #2C5D8F;"></span></span>
+<span style="position: relative; height: 2px; background: #C9D6E6;"><span class="svc-run" style="position: absolute; top: -4px; width: 10px; height: 10px; border-radius: 999px; background: #5B8FC7; animation-delay: .8s;"></span></span>
+<span style="position: relative; height: 2px; background: #C9D6E6;"><span class="svc-run" style="position: absolute; top: -4px; width: 10px; height: 10px; border-radius: 999px; background: #2C5D8F; animation-delay: 1.6s;"></span></span>
+</div>
+<span style="flex: 0 0 auto; padding: 14px; background: rgba(255,255,255,0.7); border: 1px solid #E1E7F0;"><span class="svc-pop" style="display: flex; align-items: center; justify-content: center; width: 96px; height: 96px; background: #2C5D8F; color: #F4F0E8; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; box-shadow: 0 14px 30px rgba(44,93,143,0.35);">INSIGHT</span></span>
+<div style="flex: 0.6; display: flex; flex-direction: column;">
+<span style="position: relative; height: 2px; background: #C9D6E6;"><span class="svc-run" style="position: absolute; top: -4px; width: 10px; height: 10px; border-radius: 999px; background: #B8893A; animation-delay: 1.2s;"></span></span>
+</div>
+</div>
+</div>
+</article>
+<article style="position: relative; flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 18px; padding: 36px 36px 36px; box-sizing: border-box; background: radial-gradient(120% 60% at 0% 0%, rgba(143,180,216,0.20), rgba(255,255,255,0) 60%), #FFFFFF; color: #1C2230; border: 1px solid rgba(28,34,48,0.08); box-shadow: 0 24px 60px rgba(0,0,0,0.30), 0 2px 0 rgba(255,255,255,0.6) inset;">
+<span class="svc-link" aria-hidden="true" style="position: absolute; right: -25px; top: 54px; width: 24px; height: 2px; background: #2C5D8F;"><span style="position: absolute; right: -3px; top: -3px; width: 8px; height: 8px; border-radius: 999px; background: #FFFFFF; border: 1px solid #2C5D8F;"></span></span>
+<div style="display: flex; align-items: center; gap: 14px;"><span style="display: inline-flex; align-items: center; padding: 8px 16px; border: 1px solid #BFD0E6; background: #EEF3FA; color: #2C5D8F; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;">Service 04</span><span class="svc-blink" style="width: 8px; height: 8px; border-radius: 999px; background: #2C5D8F;"></span></div>
+<h3 style="margin: 4px 0 0; font-size: 26px; line-height: 32px; font-weight: 500; letter-spacing: -0.015em;">Accessibility · 508 &amp; WCAG</h3>
+<p style="margin: 0; font-size: 16px; line-height: 27px; font-weight: 300; color: #4A5160;">Contrast, keyboard access, screen readers and alt text, checked and built in — usable by everyone, with less legal risk.</p>
+<div style="position: relative; height: 230px; margin-top: auto; background: radial-gradient(80% 60% at 50% 0%, rgba(143,180,216,0.28), rgba(245,247,251,0) 70%), #F5F7FB; border: 1px solid #E1E7F0; box-shadow: inset 0 1px 0 #FFFFFF, inset 0 -12px 24px rgba(44,93,143,0.04); overflow: hidden;" aria-hidden="true"><div style="position: absolute; left: 24px; top: 24px; right: 120px; display: flex; flex-direction: column; gap: 10px;"><div style="display: flex; align-items: center; justify-content: space-between; padding: 0 14px; height: 36px; background: #FFFFFF; border: 1px solid #E1E7F0; font-size: 13px; font-weight: 400; color: #3F3A33;"><span>Contrast 4.5:1</span><svg class="svc-check" style="animation-delay: 0.0s;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2C5D8F" stroke-width="2.4"><path d="M4 12.5L9.5 18L20 6.5"></path></svg></div><div style="display: flex; align-items: center; justify-content: space-between; padding: 0 14px; height: 36px; background: #FFFFFF; border: 1px solid #E1E7F0; font-size: 13px; font-weight: 400; color: #3F3A33;"><span>Keyboard access</span><svg class="svc-check" style="animation-delay: 0.6s;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2C5D8F" stroke-width="2.4"><path d="M4 12.5L9.5 18L20 6.5"></path></svg></div><div style="display: flex; align-items: center; justify-content: space-between; padding: 0 14px; height: 36px; background: #FFFFFF; border: 1px solid #E1E7F0; font-size: 13px; font-weight: 400; color: #3F3A33;"><span>Screen readers</span><svg class="svc-check" style="animation-delay: 1.2s;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2C5D8F" stroke-width="2.4"><path d="M4 12.5L9.5 18L20 6.5"></path></svg></div><div style="display: flex; align-items: center; justify-content: space-between; padding: 0 14px; height: 36px; background: #FFFFFF; border: 1px solid #E1E7F0; font-size: 13px; font-weight: 400; color: #3F3A33;"><span>Alt text</span><svg class="svc-check" style="animation-delay: 1.8s;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2C5D8F" stroke-width="2.4"><path d="M4 12.5L9.5 18L20 6.5"></path></svg></div></div><span class="svc-pop" style="position: absolute; right: 24px; top: 24px; width: 76px; height: 76px; border: 1px solid #2C5D8F; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; box-shadow: 0 10px 24px rgba(44,93,143,0.18);"><span style="font-size: 24px; font-weight: 500; color: #2C5D8F;">AA</span><span style="font-size: 9px; font-weight: 600; letter-spacing: 0.18em; color: #3F3A33;">WCAG</span></span></div>
+</article>
+<article style="position: relative; flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 18px; padding: 36px 36px 36px; box-sizing: border-box; background: radial-gradient(120% 60% at 0% 0%, rgba(143,180,216,0.20), rgba(255,255,255,0) 60%), #FFFFFF; color: #1C2230; border: 1px solid rgba(28,34,48,0.08); box-shadow: 0 24px 60px rgba(0,0,0,0.30), 0 2px 0 rgba(255,255,255,0.6) inset;">
+
+<div style="display: flex; align-items: center; gap: 14px;"><span style="display: inline-flex; align-items: center; padding: 8px 16px; border: 1px solid #BFD0E6; background: #EEF3FA; color: #2C5D8F; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;">Service 05</span><span class="svc-blink" style="width: 8px; height: 8px; border-radius: 999px; background: #B8893A;"></span></div>
+<h3 style="margin: 4px 0 0; font-size: 26px; line-height: 32px; font-weight: 500; letter-spacing: -0.015em;">Design systems</h3>
+<p style="margin: 0; font-size: 16px; line-height: 27px; font-weight: 300; color: #4A5160;">One shared set of tokens and components, so every new page stays consistent and fast to build.</p>
+<div style="position: relative; height: 230px; margin-top: auto; background: radial-gradient(80% 60% at 50% 0%, rgba(143,180,216,0.28), rgba(245,247,251,0) 70%), #F5F7FB; border: 1px solid #E1E7F0; box-shadow: inset 0 1px 0 #FFFFFF, inset 0 -12px 24px rgba(44,93,143,0.04); overflow: hidden;" aria-hidden="true">
+<div style="position: absolute; left: 24px; top: 24px; bottom: 24px; width: 92px; display: flex; flex-direction: column; gap: 8px;">
+<span style="height: 34px; background: #FFFFFF; border: 1px solid #E1E7F0; display: flex; align-items: center; padding-left: 10px; font-size: 15px; font-weight: 500;">Aa</span>
+<span style="display: flex; gap: 6px;"><span style="flex: 1; height: 24px; background: #1C2230;"></span><span style="flex: 1; height: 24px; background: #2C5D8F;"></span><span style="flex: 1; height: 24px; background: #E9E2D6;"></span></span>
+<span style="height: 26px; background: #2C5D8F;"></span>
+<span style="height: 26px; border: 1px solid #1C2230; box-sizing: border-box;"></span>
+<span style="font-size: 9px; font-weight: 600; letter-spacing: 0.18em; color: #665F55;">TOKENS</span>
+</div>
+<div style="position: absolute; left: 140px; right: 24px; top: 24px; bottom: 24px; background: #FFFFFF; border: 1px solid #E1E7F0; padding: 14px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px;">
+<span class="svc-snap" style="--x: -70px; --y: 0px; height: 12px; width: 55%; background: #1C2230;"></span>
+<span class="svc-snap" style="--x: -90px; --y: 20px; height: 20px; width: 36%; background: #2C5D8F; animation-delay: .3s;"></span>
+<span style="display: flex; gap: 8px; flex: 1;"><span class="svc-snap" style="--x: -60px; --y: 30px; flex: 1; background: #EEF3FA; border: 1px solid #D5DEEA; animation-delay: .6s;"></span><span class="svc-snap" style="--x: 40px; --y: 40px; flex: 1; background: #EEF3FA; border: 1px solid #D5DEEA; animation-delay: .9s;"></span></span>
+</div>
+</div>
+</article>
+</div>
+
+<!-- What changes for you: selectable outcomes -->
+<div style="margin-top: 120px; padding-top: 64px; border-top: 1px solid rgba(244,240,232,0.10);">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 48px;">
+<h3 style="margin: 0; font-size: clamp(30px, 3vw, 44px); line-height: 1.12; font-weight: 300; letter-spacing: -0.02em;">What changes <span style="color: #8FB4D8;">for you</span></h3>
+<p style="margin: 0; max-width: 360px; font-size: 15px; line-height: 24px; font-weight: 300; color: #C9C2B4;">Choose an outcome to see what it means for your business and how we get you there.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch;">
+
+<div style="flex: 1 1 360px; min-width: 0; max-width: 480px; background: #FFFFFF; color: #1C2230; border: 1px solid rgba(28,34,48,0.08); box-shadow: 0 24px 60px rgba(0,0,0,0.30); display: flex; flex-direction: column;">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 22px 28px; border-bottom: 1px solid #E8ECF2;">
+<span style="display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: #4A5160;"><span style="width: 8px; height: 8px; border-radius: 999px; background: #2C5D8F;"></span>Outcomes</span>
+<span style="font-size: 13px; font-weight: 500; letter-spacing: 0.14em; color: #1C2230;"><span class="oc-num">05</span> / 07</span>
+</div>
+<div id="oc-list" role="list" style="padding: 12px; display: flex; flex-direction: column; gap: 4px; flex: 1;"><!-- outcome buttons generated by js/main.js -->
+</div>
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px; padding: 20px 28px; border-top: 1px solid #E8ECF2; font-size: 12px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: #4A5160;"><span style="width: 8px; height: 8px; border-radius: 999px; background: #2C5D8F;"></span>Included in every project</div>
+</div>
+
+<div aria-live="polite" style="flex: 2 1 520px; min-width: 0; position: relative; background: radial-gradient(70% 60% at 100% 0%, rgba(143,180,216,0.22), rgba(255,255,255,0) 60%), #FFFFFF; color: #1C2230; border: 1px solid rgba(28,34,48,0.08); box-shadow: 0 24px 60px rgba(0,0,0,0.30); display: flex; flex-direction: column; overflow: hidden;">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 32px; border-bottom: 1px solid #E8ECF2;">
+<span style="font-size: 14px; font-weight: 400; letter-spacing: 0.06em; color: #4A5160;">outcomes / <span class="oc-num" style="color: #2C5D8F; font-weight: 600;">05</span></span>
+<span style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border: 1px solid #BFD0E6; background: #EEF3FA; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #2C5D8F;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2C5D8F" stroke-width="2.6" aria-hidden="true"><path d="M4 12.5L9.5 18L20 6.5"></path></svg><span id="oc-tag">Modernize + Care</span></span>
+</div>
+<div style="position: relative; flex: 1; padding: 56px 48px 40px; display: flex; flex-direction: column; gap: 22px;">
+<span aria-hidden="true" style="position: absolute; left: 24px; top: -10px; font-size: 300px; line-height: 1; font-weight: 200; letter-spacing: -0.06em; color: #E6EEF8;" class="oc-num">05</span>
+<h4 style="position: relative; margin: 0; max-width: 680px; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.22; font-weight: 400; letter-spacing: -0.015em;" id="oc-title">Found, understood and recommended by AI assistants.</h4>
+<p style="position: relative; margin: 0; max-width: 640px; font-size: 17px; line-height: 29px; font-weight: 300; color: #3F3A33;" id="oc-body">More customers now ask AI assistants instead of searching. We structure your site so AI tools can read it accurately, answer questions about your business and point people to you.</p>
+<div style="position: relative; margin-top: 8px; padding-top: 28px; border-top: 1px dashed #D5DEEA; display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start;">
+<span id="oc-tile" style="flex: 0 0 72px; height: 72px; background: #B8893A; display: flex; align-items: center; justify-content: center; box-shadow: 0 14px 30px rgba(44,93,143,0.28);"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" aria-hidden="true"><path id="oc-icon" d=""></path></svg></span>
+<div style="flex: 1 1 280px; min-width: 0;">
+<p style="margin: 0 0 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #1C2230;">How we get you there</p>
+<ul id="oc-how" style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+<!-- filled by js/main.js -->
+</ul>
+</div>
+</div>
+</div>
+<div id="oc-segs" aria-hidden="true" style="display: flex; gap: 6px; padding: 20px 32px 24px; border-top: 1px solid #E8ECF2;">
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- Packages (warm, raised) -->
+<section id="packages" style="position: relative; background: #F4F0E8; color: #1C2230; padding: 176px 0;">
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; height: 120px; background: linear-gradient(to bottom, rgba(11,15,22,0.10), rgba(11,15,22,0));"></div>
+<div style="position: relative; max-width: 1320px; margin: 0 auto; padding: 0 40px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 88px;">
+<div>
+<p style="margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #665F55;">Packages</p>
+<h2 style="margin: 0; font-size: clamp(40px, 4.4vw, 64px); line-height: 1.05; font-weight: 300; letter-spacing: -0.03em;">Clear prices. No surprises.</h2>
+</div>
+<p style="margin: 0; max-width: 380px; font-size: 16px; line-height: 26px; color: #665F55;">Every project starts with a fixed quote. Start small with an audit, or go straight to a full redesign.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: start;">
+
+<article style="display: flex; flex-direction: column; box-shadow: 16px 16px 0 #D8CDBA, 0 30px 60px rgba(26,34,48,0.14);">
+<div style="background: #E9E2D6; padding: 40px 32px 32px; min-height: 290px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 32px;">
+<div><h3 style="margin: 0 0 14px; font-size: 30px; line-height: 36px; font-weight: 400; letter-spacing: -0.01em;">Website audit</h3><p style="margin: 0; font-size: 15px; line-height: 24px; color: #3F3A33;">A clear, prioritized report on what's holding your site back — yours to keep, whether or not we work together.</p></div>
+<p style="margin: 0; text-align: right;"><span style="display: block; font-size: 12px; letter-spacing: 0.06em; color: #3F3A33;">Fixed price</span><span style="font-size: 40px; line-height: 1; font-weight: 300; letter-spacing: -0.02em;">[$PRICE]</span></p>
+</div>
+<div style="background: #FBF9F5; padding: 28px 32px 32px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center;">
+<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;">Start here</p>
+<p style="margin: 0 0 16px; font-size: 14px; color: #665F55;">Delivered in [5] business days</p>
+<a href="#contact" style="padding: 16px 28px; border: 1px solid #1C2230; color: #1C2230; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none;">Order an audit</a>
+</div>
+</article>
+
+<article style="display: flex; flex-direction: column; transform: translateY(-32px); box-shadow: 16px 16px 0 #2C5D8F, 0 40px 80px rgba(26,34,48,0.28);">
+<div style="position: relative; background: #1F4268; color: #F4F0E8; padding: 40px 32px 32px; min-height: 290px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; overflow: hidden;">
+<div aria-hidden="true" style="position: absolute; right: -80px; top: -80px; width: 260px; height: 260px; border-radius: 999px; background: radial-gradient(circle, rgba(143,180,216,0.35), rgba(143,180,216,0) 70%);"></div>
+<div style="position: relative;"><p style="margin: 0 0 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #E3C98F;">Most chosen</p><h3 style="margin: 0 0 14px; font-size: 30px; line-height: 36px; font-weight: 400; letter-spacing: -0.01em;">Website modernization</h3><p style="margin: 0; font-size: 15px; line-height: 24px; color: #C9C2B4;">Research, redesign and build of a fast, accessible site your customers can actually use.</p></div>
+<p style="position: relative; margin: 0; text-align: right;"><span style="display: block; font-size: 12px; letter-spacing: 0.06em; color: #C9C2B4;">Starting at</span><span style="font-size: 40px; line-height: 1; font-weight: 300; letter-spacing: -0.02em;">[$PRICE]</span></p>
+</div>
+<div style="background: #FBF9F5; padding: 28px 32px 32px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center;">
+<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;">Fixed-price project</p>
+<p style="margin: 0 0 16px; font-size: 14px; color: #665F55;">Typically [6–8] weeks, milestone billing</p>
+<a href="#contact" class="btn-glow" style="display: inline-flex; align-items: center; gap: 14px; padding: 8px 8px 8px 24px; color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none;">Book a discovery call<span class="btn-chip" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2"><path d="M4 12H20M14 6L20 12L14 18"></path></svg></span></a>
+</div>
+</article>
+
+<article style="display: flex; flex-direction: column; box-shadow: 16px 16px 0 #D8CDBA, 0 30px 60px rgba(26,34,48,0.14);">
+<div style="background: #1A2230; color: #F4F0E8; padding: 40px 32px 32px; min-height: 290px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 32px;">
+<div><h3 style="margin: 0 0 14px; font-size: 30px; line-height: 36px; font-weight: 400; letter-spacing: -0.01em;">AI/UX care</h3><p style="margin: 0; font-size: 15px; line-height: 24px; color: #A8A397;">Ongoing testing, analytics and improvements, so your site keeps getting better after launch.</p></div>
+<p style="margin: 0; text-align: right;"><span style="display: block; font-size: 12px; letter-spacing: 0.06em; color: #A8A397;">Starting at</span><span style="font-size: 40px; line-height: 1; font-weight: 300; letter-spacing: -0.02em;">[$PRICE]<span style="font-size: 18px; color: #A8A397;">/mo</span></span></p>
+</div>
+<div style="background: #FBF9F5; padding: 28px 32px 32px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center;">
+<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;">Month-to-month retainer</p>
+<p style="margin: 0 0 16px; font-size: 14px; color: #665F55;">Cancel anytime, no long contract</p>
+<a href="#contact" style="padding: 16px 28px; border: 1px solid #1C2230; color: #1C2230; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none;">Ask about care</a>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- Studio -->
+<section id="studio" style="position: relative; background: #0B0F16; padding: 176px 0;">
+<div aria-hidden="true" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none;">
+<div style="position: absolute; right: -10%; top: -10%; width: 1000px; height: 1000px; border-radius: 999px; background: radial-gradient(circle, rgba(44,93,143,0.35) 0%, rgba(44,93,143,0) 62%);"></div>
+</div>
+<div style="position: relative; max-width: 1320px; margin: 0 auto; padding: 0 40px;">
+<p style="margin: 0 0 24px; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #E3C98F;">The studio</p>
+<h2 style="margin: 0 0 72px; max-width: 1120px; font-size: clamp(40px, 4.8vw, 76px); line-height: 1.06; font-weight: 300; letter-spacing: -0.035em;">Experience earned with <span style="color: #8FB4D8;">federal agencies</span>, <span style="color: #8FB4D8;">enterprise software</span> and <span style="color: #8FB4D8;">small businesses</span> — now working for your business.</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 64px; align-items: center; margin-bottom: 104px;">
+<div style="flex: 0 1 380px; position: relative; aspect-ratio: 4 / 5;">
+<div aria-hidden="true" style="position: absolute; inset: 0; transform: translate(24px, 24px); border: 1px solid rgba(143,180,216,0.35);"></div>
+<div style="position: absolute; inset: 0; background: #1A2230; box-shadow: 0 40px 80px rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #A8A397;">[Studio or team image]</span>
+</div>
+</div>
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+<p style="margin: 0; font-size: 19px; line-height: 32px; font-weight: 300; color: #C9C2B4;">designs w/ GOD was founded by Aquib Sylvester, a UX strategist whose work spans Medicare.gov, NSF.gov and the USDA Forest Service, clinical apps for the American College of Cardiology, and AI-assisted research at Actian — always with a person checking every output.</p>
+<p style="margin: 0; font-size: 19px; line-height: 32px; font-weight: 300; color: #C9C2B4;">Today the studio brings that same rigor to businesses whose websites have fallen behind. <span style="color: #F4F0E8;">Designed with intention.</span></p>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+<div style="padding: 40px 32px; background: rgba(244,240,232,0.04); border: 1px solid rgba(244,240,232,0.10);"><p style="margin: 0; font-size: 80px; line-height: 1; font-weight: 200; letter-spacing: -0.05em; text-shadow: 0 0 40px rgba(143,180,216,0.35);">14<span style="color: #8FB4D8;">+</span></p><p style="margin: 14px 0 0; font-size: 13px; letter-spacing: 0.06em; color: #A8A397;">Years in design</p></div>
+<div style="padding: 40px 32px; background: rgba(244,240,232,0.04); border: 1px solid rgba(244,240,232,0.10);"><p style="margin: 0; font-size: 80px; line-height: 1; font-weight: 200; letter-spacing: -0.05em; text-shadow: 0 0 40px rgba(143,180,216,0.35);">300<span style="color: #8FB4D8;">k+</span></p><p style="margin: 14px 0 0; font-size: 13px; letter-spacing: 0.06em; color: #A8A397;">App installs</p></div>
+<div style="padding: 40px 32px; background: rgba(244,240,232,0.04); border: 1px solid rgba(244,240,232,0.10);"><p style="margin: 0; font-size: 80px; line-height: 1; font-weight: 200; letter-spacing: -0.05em; text-shadow: 0 0 40px rgba(143,180,216,0.35);">80<span style="color: #8FB4D8;">%</span></p><p style="margin: 14px 0 0; font-size: 13px; letter-spacing: 0.06em; color: #A8A397;">Faster research synthesis</p></div>
+<div style="padding: 40px 32px; background: rgba(244,240,232,0.04); border: 1px solid rgba(244,240,232,0.10);"><p style="margin: 0; font-size: 80px; line-height: 1; font-weight: 200; letter-spacing: -0.05em; text-shadow: 0 0 40px rgba(143,180,216,0.35);">14<span style="color: #8FB4D8;">/20</span></p><p style="margin: 14px 0 0; font-size: 13px; letter-spacing: 0.06em; color: #A8A397;">Federal teams aligned on one UX strategy</p></div>
+</div>
+</div>
+</section>
+
+<!-- Work -->
+<section id="work" style="position: relative; background: #0B0F16; padding: 0 0 176px;">
+<div style="max-width: 1320px; margin: 0 auto; padding: 0 40px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 56px; padding-top: 72px; border-top: 1px solid rgba(244,240,232,0.10);">
+<div>
+<p style="margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #E3C98F;">Selected work</p>
+<h2 style="margin: 0; font-size: clamp(40px, 4.4vw, 64px); line-height: 1.05; font-weight: 300; letter-spacing: -0.03em;">Three stories</h2>
+</div>
+<a href="#work" style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #F4F0E8; text-decoration: none;">View all <span style="color: #8FB4D8;">↗</span></a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
+<a href="#" style="grid-column: 1 / -1; position: relative; min-height: 520px; background: #141B27; border: 1px solid rgba(244,240,232,0.08); display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding: 36px; color: #F4F0E8; text-decoration: none; overflow: hidden;">
+<div aria-hidden="true" style="position: absolute; left: 50%; top: 50%; width: 700px; height: 700px; transform: translate(-30%, -60%); border-radius: 999px; background: radial-gradient(circle, rgba(44,93,143,0.45), rgba(44,93,143,0) 65%);"></div>
+<div aria-hidden="true" style="position: absolute; left: 28%; top: 56px; width: 300px; height: 200px; background: #1A2230; border: 1px solid #2E3A4D; box-shadow: 0 30px 60px rgba(0,0,0,0.5);"></div>
+<div aria-hidden="true" style="position: absolute; left: 36%; top: 104px; width: 300px; height: 200px; background: #212A39; border: 1px solid #3A4659; box-shadow: 0 30px 60px rgba(0,0,0,0.5);"></div>
+<div aria-hidden="true" style="position: absolute; left: 44%; top: 152px; width: 300px; height: 200px; background: #F4F0E8; box-shadow: 0 40px 80px rgba(0,0,0,0.6); padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px;"><span style="width: 60%; height: 12px; background: #1C2230;"></span><span style="width: 85%; height: 6px; background: #DDD5C7;"></span><span style="width: 75%; height: 6px; background: #DDD5C7;"></span><span style="width: 34%; height: 24px; background: #2C5D8F; margin-top: auto;"></span></div>
+<span style="position: relative;"><span style="display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #A8A397; margin-bottom: 8px;">USDA Forest Service</span><span style="font-size: clamp(22px, 2.2vw, 32px); font-weight: 300;">Three permit systems, one flow</span></span>
+<span style="position: relative; font-size: 13px; color: #A8A397;">2019–2022</span>
+</a>
+<a href="#" style="position: relative; min-height: 420px; background: #1F4268; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding: 36px; color: #F4F0E8; text-decoration: none; overflow: hidden; box-shadow: inset 0 1px 0 rgba(244,240,232,0.12);">
+<div aria-hidden="true" style="position: absolute; left: 50%; top: 50px; transform: translateX(-50%); width: 220px; height: 220px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;"><span style="background: rgba(244,240,232,0.92); box-shadow: 0 20px 40px rgba(0,0,0,0.35);"></span><span style="background: rgba(143,180,216,0.55); box-shadow: 0 20px 40px rgba(0,0,0,0.35);"></span><span style="background: rgba(143,180,216,0.35); box-shadow: 0 20px 40px rgba(0,0,0,0.35);"></span><span style="border: 1px solid rgba(244,240,232,0.6);"></span></div>
+<span style="position: relative;"><span style="display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #C9C2B4; margin-bottom: 8px;">American College of Cardiology</span><span style="font-size: 24px; font-weight: 300;">Clinical decision apps</span></span>
+<span style="position: relative; font-size: 13px; color: #C9C2B4;">2016–2019</span>
+</a>
+<a href="#" style="position: relative; min-height: 420px; background: #E9E2D6; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding: 36px; color: #1C2230; text-decoration: none; overflow: hidden;">
+<svg aria-hidden="true" viewBox="0 0 400 240" style="position: absolute; left: 0; top: 30px; width: 100%; height: auto;"><g fill="#1A2230"><circle cx="90" cy="60" r="7"></circle><circle cx="140" cy="150" r="7"></circle><circle cx="110" cy="105" r="7"></circle><circle cx="170" cy="80" r="7"></circle><circle cx="190" cy="135" r="7"></circle><circle cx="70" cy="130" r="5" opacity="0.5"></circle><circle cx="160" cy="40" r="5" opacity="0.5"></circle></g><path d="M230 100H320M300 80L320 100L300 120" fill="none" stroke="#2C5D8F" stroke-width="7"></path><rect x="330" y="72" width="46" height="56" fill="#F4F0E8" stroke="#1A2230" stroke-width="2"></rect></svg>
+<span style="position: relative;"><span style="display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #3F3A33; margin-bottom: 8px;">Actian</span><span style="font-size: 24px; font-weight: 300;">AI research pipeline</span></span>
+<span style="position: relative; font-size: 13px; color: #3F3A33;">2022–now</span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact" style="position: relative; background: #1F4268; color: #F4F0E8; overflow: hidden;">
+<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none;">
+<div style="position: absolute; left: 55%; top: -30%; width: 900px; height: 900px; border-radius: 999px; background: radial-gradient(circle, rgba(143,180,216,0.30) 0%, rgba(143,180,216,0) 62%);"></div>
+<svg viewBox="0 0 400 200" style="position: absolute; right: 4%; top: 80px; width: 520px; opacity: 0.55;"><g fill="none" stroke-width="1.2"><path d="M30 60L38 74H22Z" stroke="#E3C98F"></path><path d="M120 30L128 44H112Z" stroke="#F4F0E8"></path><path d="M210 90L218 104H202Z" stroke="#8FB4D8"></path><path d="M300 40L308 54H292Z" stroke="#E3C98F"></path><path d="M360 120L368 134H352Z" stroke="#F4F0E8"></path><path d="M80 150L88 164H72Z" stroke="#8FB4D8"></path><circle cx="170" cy="150" r="7" stroke="#F4F0E8"></circle><circle cx="260" cy="160" r="5" stroke="#E3C98F"></circle><circle cx="340" cy="80" r="6" stroke="#8FB4D8"></circle><path d="M60 110L72 70" stroke="#8FB4D8" stroke-width="2"></path><path d="M240 60L252 20" stroke="#8FB4D8" stroke-width="2"></path></g></svg>
+</div>
+<div style="position: relative; max-width: 1320px; margin: 0 auto; padding: 160px 40px 0;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 40px; padding-bottom: 72px; border-bottom: 1px solid #3A5F86;">
+<div>
+<p style="margin: 0 0 20px; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #E3C98F;">Have a site that needs care?</p>
+<p style="margin: 0; font-size: clamp(48px, 6vw, 92px); line-height: 1; font-weight: 300; letter-spacing: -0.035em;">Let's talk about it.</p>
+</div>
+<a href="#contact" style="padding: 22px 36px; background: #F4F0E8; color: #1A2230; font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; box-shadow: 0 20px 48px rgba(0,0,0,0.35);">Book a discovery call</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 56px 80px; padding: 72px 0; border-bottom: 1px solid #3A5F86;">
+<div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 24px;">
+<svg viewBox="14 14 312 112" width="96" height="34" role="img" aria-label="designs w/ GOD"><defs><clipPath id="d-ft-a"><rect x="0" y="20" width="400" height="100"></rect></clipPath><clipPath id="d-ft-x"><rect x="0" y="58" width="400" height="62"></rect></clipPath></defs><g fill="none" stroke="#F4F0E8" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"><circle cx="50" cy="89" r="25"></circle><path clip-path="url(#d-ft-a)" d="M75 10V130"></path><path clip-path="url(#d-ft-x)" d="M95.8 50L115 114L130 64L145 114L164.2 50"></path><path clip-path="url(#d-ft-a)" d="M170.2 130L206.2 10"></path><path d="M301.1 38.9A44 44 0 1 0 314 70H280"></path></g></svg>
+<nav aria-label="Footer" style="display: flex; flex-direction: column; gap: 12px;">
+<a href="#story" style="font-size: 14px; color: #F4F0E8; text-decoration: none;">Process</a>
+<a href="#offer" style="font-size: 14px; color: #F4F0E8; text-decoration: none;">Services</a>
+<a href="#packages" style="font-size: 14px; color: #F4F0E8; text-decoration: none;">Packages</a>
+<a href="#work" style="font-size: 14px; color: #F4F0E8; text-decoration: none;">Work</a>
+</nav>
+</div>
+<form style="flex: 2 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 16px;">
+<h2 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 400; letter-spacing: -0.01em;">Not ready yet? Get the free checklist.</h2>
+<p style="margin: 0 0 8px; max-width: 520px; font-size: 16px; line-height: 26px; color: #C9C2B4;">10 signs your website is losing customers — and what to fix first. One email a month after that; unsubscribe anytime.</p>
+<label for="d-email" style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;">Email address</label>
+<div style="display: flex; flex-wrap: wrap; gap: 12px;">
+<input id="d-email" type="email" placeholder="you@business.com" style="flex: 1 1 260px; min-height: 52px; box-sizing: border-box; padding: 0 18px; border: 1px solid #8FA8C2; border-radius: 0; background: rgba(11,15,22,0.25); color: #F4F0E8; font-family: Lexend, system-ui, sans-serif; font-size: 16px;">
+<button type="button" style="min-height: 52px; padding: 0 28px; border: 0; border-radius: 0; background: #F4F0E8; color: #1A2230; font-family: Lexend, system-ui, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer;">Get the checklist</button>
+</div>
+</form>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding: 28px 0; font-size: 14px; color: #C9C2B4;">
+<span>© 2026 designs w/ GOD</span>
+<span>[YOUR EMAIL]</span>
+</div>
+<p class="outline-word" aria-hidden="true" style="margin: 16px 0 0; font-size: clamp(96px, 19vw, 300px); line-height: 0.78; font-weight: 300; letter-spacing: -0.045em; white-space: nowrap;">intention</p>
+</div>
+</section>
+
+</div>
 </body>
 </html>
